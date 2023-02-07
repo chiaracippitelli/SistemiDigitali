@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="21dp"
+        android:backgroundTint="#145F35"
+        android:onClick="onCameraButton"
+        android:text="Acquisisci Foto"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:layout_constraintBaseline_toBaselineOf="@+id/LoadButton"
+        app:layout_constraintEnd_toStartOf="@+id/LoadButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/LoadButton"
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="93dp"
+        android:backgroundTint="#145F35"
+        android:onClick="onLoadButton"
+        android:text="Carica da Galleria"
+        app:layout_anchorGravity="start|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cameraButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="343dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="150dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/LoadButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_guess_the_trash_round"
+        tools:srcCompat="@mipmap/ic_launcher_guess_the_trash_round" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

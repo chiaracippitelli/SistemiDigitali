@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="372dp"
+        android:layout_height="199dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/predictButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/predictButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        android:backgroundTint="#09630D"
+        android:onClick="onPredictButton"
+        android:text="Scopri come riciclarlo!"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="167dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginBottom="61dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:textSize="34sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/descrizione"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predictButton" />
+
+    <TextView
+        android:id="@+id/descrizione"
+        android:layout_width="340dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="38dp"
+        android:lineSpacingExtra="4sp"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="20sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/curiosita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+    <TextView
+        android:id="@+id/curiosita"
+        android:layout_width="329dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="38dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="20sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descrizione" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
